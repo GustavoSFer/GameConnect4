@@ -1,5 +1,7 @@
 package br.com.fernandes.core;
 
+import java.util.Iterator;
+
 public class Tabuleiro {
 	
 	private final int linhas;
@@ -17,6 +19,15 @@ public class Tabuleiro {
 			for (int j = 0; j < this.colunas; j++) {
 				this.grid[i][j] = "."; 
 			}
+		}
+	}
+	
+	public void mostrarTabuleiro() {
+		for (String[] linha : this.grid) {
+			for (String celula : linha) {
+				System.out.print( celula + " ");
+			}
+			System.out.println();
 		}
 	}
 	
