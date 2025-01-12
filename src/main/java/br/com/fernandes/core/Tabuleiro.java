@@ -12,4 +12,12 @@ public class Tabuleiro {
 		this.grid = new String[linhas][colunas];
 	}
 	
+	public void iniciarTabuleiro() {
+		for (int i = 0; i < this.linhas; i++) {
+			for (int j = 0; j < this.colunas; j++) {
+				this.grid[i][j] = "."; 
+			}
+		}
+	}
+	
 }
