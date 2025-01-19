@@ -31,4 +31,16 @@ public class Tabuleiro {
 		}
 	}
 	
+	public boolean posicionarDisco(int coluna, String simbolo ) {
+		if (coluna < 0 || coluna >= this.colunas) return false;
+		
+		for (int i = this.linhas; i >= 0; i--) {
+			if (this.grid[i][coluna].equals(".")) {
+				this.grid[i][coluna] = simbolo;
+				return true;
+			}
+		}
+		return false;
+	}
+	
 }
